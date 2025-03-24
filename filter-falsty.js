@@ -3,11 +3,13 @@
 let falsyValue = [0, "hello", false, 42, "", undefined];
 
 function filterFalsy(falsy) {
+    let results = []
     for (falsyValue of falsy) {
-        if (falsyValue != false) {
-            return falsyValue;
+        if (falsyValue) {
+            results.push(falsyValue);
         }
     }
+    return results;
 }
 
 console.log(filterFalsy(falsyValue));
